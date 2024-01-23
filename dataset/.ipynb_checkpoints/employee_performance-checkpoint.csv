@@ -1,0 +1,25 @@
+﻿Employee,Department,Month,Rating
+"John Doe",Sales,Jan-2023,4.2
+"John Doe",Sales,Feb-2023,4.5
+"John Doe",Sales,Mar-2023,4.1
+"John Doe",Sales,Apr-2023,4.3
+"John Doe",Sales,May-2023,4.6
+"John Doe",Sales,Jun-2023,4.4
+"Jane Smith",Marketing,Jan-2023,4.0
+"Jane Smith",Marketing,Feb-2023,3.8
+"Jane Smith",Marketing,Mar-2023,3.9
+"Jane Smith",Marketing,Apr-2023,4.2
+"Jane Smith",Marketing,May-2023,4.1
+"Jane Smith",Marketing,Jun-2023,4.3
+"Emily Johnson",HR,Jan-2023,4.5
+"Emily Johnson",HR,Feb-2023,4.6
+"Emily Johnson",HR,Mar-2023,4.4
+"Emily Johnson",HR,Apr-2023,4.8
+"Emily Johnson",HR,May-2023,4.7
+"Emily Johnson",HR,Jun-2023,4.9
+"William Brown",IT,Jan-2023,3.9
+"William Brown",IT,Feb-2023,4.1
+"William Brown",IT,Mar-2023,4.0
+"William Brown",IT,Apr-2023,3.8
+"William Brown",IT,May-2023,4.0
+"William Brown",IT,Jun-2023,4.2
