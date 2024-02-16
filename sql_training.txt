@@ -1,0 +1,31 @@
+1. Question: Retrieve the names of all employees along with their respective departments.
+-> SELECT employees.first_name,employees.last_name,employees.department FROM employees
+
+
+2. Question: Find the total number of projects each employee is assigned to, along with their respective employee IDs.
+
+-> SELECT employees.employee_id,employees.first_name , employees.last_name,COUNT(employee_projects.project_id) AS Total_Projects
+	FROM employees
+	LEFT JOIN employee_projects ON employees.employee_id = employee_projects.employee_id
+	GROUP BY employees.employee_id
+3. Question: Question: Retrieve the names of all employees who are not currently assigned to any projects.
+->  SELECT employees.employee_id,employees.first_name,employees.department FROM employees 
+	WHERE employees.employee_id NOT IN(SELECT DISTINCT employee_id FROM employee_projects)
+4. Question: Find the employee(s) with the highest number of projects assigned to them.
+
+->	SELECT employees.employee_id,employees.first_name, COUNT(employee_projects.project_id) as "Total Project" FROM employees
+	LEFT JOIN employee_projects ON employees.employee_id = employee_projects.employee_id
+	GROUP BY employees.employee_id
+	ORDER BY COUNT(employee_projects.project_id) DESC
+5. Question: Find the names of all projects along with the number of employees assigned to each project.
+->	SELECT employee_projects.project_name, COUNT(employees.employee_id) as "Total Employees"
+	FROM employee_projects LEFT JOIN employees ON employee_projects.employee_id = employees.employee_id 
+	GROUP BY employee_projects.project_name 
+	ORDER BY COUNT(employees.employee_id) DESC
+6. Question: Find the employee(s) who are assigned to the same projects as employee with ID 101.
+
+-> SELECT employee_projects.employee_id,employees.first_name,employees.last_name,employee_projects.project_name
+	FROM employee_projects 
+	JOIN employee_projects ep1 ON employee_projects.project_name = ep1.project_name AND ep1.employee_id=1 
+	JOIN employees ON employee_projects.employee_id = employees.employee_id
+	WHERE employees.employee_id != 1
